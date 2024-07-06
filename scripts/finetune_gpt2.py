@@ -1,3 +1,4 @@
+import os
 from transformers import GPT2LMHeadModel, GPT2Tokenizer, Trainer, TrainingArguments, TextDataset, DataCollatorForLanguageModeling
 
 def load_dataset(file_path, tokenizer):
@@ -18,12 +19,15 @@ def main():
     tokenizer = GPT2Tokenizer.from_pretrained(model_name)
     model = GPT2LMHeadModel.from_pretrained(model_name)
 
-    train_path = "../data/processed/support_chats_cleaned.txt"
+    train_path = "data/processed/support_chats_cleaned.txt"
     dataset = load_dataset(train_path, tokenizer)
     data_collator = create_data_collator(tokenizer)
 
+    output_dir = "models/gpt2-finetuned"
+    os.makedirs(output_dir, exist_ok=True)
+
     training_args = TrainingArguments(
-        output_dir="../models/gpt2-finetuned",
+        output_dir=output_dir,
         overwrite_output_dir=True,
         num_train_epochs=1,
         per_device_train_batch_size=4,
@@ -39,7 +43,7 @@ def main():
     )
 
     trainer.train()
-    trainer.save_model("../models/gpt2-finetuned")
+    trainer.save_model(output_dir)
 
 if __name__ == "__main__":
     main()
