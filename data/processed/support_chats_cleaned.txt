@@ -1,0 +1,11 @@
+Agent: Olá! Como posso ajudar hoje?
+Customer: Meu pedido não chegou ainda.
+
+Agent: Qual é o número do seu pedido?
+Customer: É 12345.
+
+Agent: Como posso ajudá-lo hoje?
+Customer: Estou com um problema no meu pedido.
+
+Agent: Qual é o número do seu pedido?
+Customer: 67890.
