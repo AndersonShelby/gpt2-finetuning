@@ -1,0 +1,17 @@
+[
+  {
+    "timestamp": "2024-07-06T12:34:56",
+    "agent": "Olá! Como posso ajudar hoje?",
+    "customer": "Meu pedido não chegou ainda.",
+    "agent": "Qual é o número do seu pedido?",
+    "customer": "É 12345."
+  },
+  {
+    "timestamp": "2024-07-06T12:35:30",
+    "agent": "Como posso ajudá-lo hoje?",
+    "customer": "Estou com um problema no meu pedido.",
+    "agent": "Qual é o número do seu pedido?",
+    "customer": "67890."
+  }
+  // Adicione mais entradas conforme necessário
+]
