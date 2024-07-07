@@ -1,17 +1,21 @@
 import json
-import os
 
-def process_raw_data(input_file, output_file):
-    # Verifica se o diretório de saída existe, caso contrário, cria-o
-    os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    
-    with open(input_file, 'r') as infile, open(output_file, 'w') as outfile:
-        raw_data = json.load(infile)
-        for chat in raw_data:
-            conversation = f"Agent: {chat['agent']}\nCustomer: {chat['customer']}\n"
-            outfile.write(conversation + "\n")
+def preprocess_data(input_file, output_file):
+    with open(input_file, 'r') as f:
+        data = json.load(f)
+
+    processed_data = []
+    for chat in data:
+        processed_chat = {
+            "timestamp": chat["timestamp"],
+            "text": f'Agent: {chat["agent"]} Customer: {chat["customer"]}'
+        }
+        processed_data.append(processed_chat)
+
+    with open(output_file, 'w') as f:
+        json.dump(processed_data, f, indent=4)
 
 if __name__ == "__main__":
-    input_path = "data/raw/support_chats.json"
-    output_path = "data/processed/support_chats_cleaned.txt"
-    process_raw_data(input_path, output_path)
+    input_path = "../data/raw/support_chats.json"
+    output_path = "../data/processed/processed_chats.json"
+    preprocess_data(input_path, output_path)
