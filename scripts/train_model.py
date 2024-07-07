@@ -1,0 +1,48 @@
+from transformers import GPT2LMHeadModel, GPT2Tokenizer, TextDataset, DataCollatorForLanguageModeling, Trainer, TrainingArguments
+import os
+
+def train_gpt2_model(dataset_path, model_output_dir):
+    model_name = "gpt2"
+    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+    model = GPT2LMHeadModel.from_pretrained(model_name)
+
+    def load_dataset(file_path, tokenizer, block_size=128):
+        return TextDataset(
+            tokenizer=tokenizer,
+            file_path=file_path,
+            block_size=block_size,
+            overwrite_cache=True
+        )
+
+    def create_data_collator(tokenizer):
+        return DataCollatorForLanguageModeling(
+            tokenizer=tokenizer,
+            mlm=False,
+        )
+
+    dataset = load_dataset(dataset_path, tokenizer)
+    data_collator = create_data_collator(tokenizer)
+
+    training_args = TrainingArguments(
+        output_dir=model_output_dir,
+        overwrite_output_dir=True,
+        num_train_epochs=3,
+        per_device_train_batch_size=4,
+        save_steps=10_000,
+        save_total_limit=2,
+    )
+
+    trainer = Trainer(
+        model=model,
+        args=training_args,
+        data_collator=data_collator,
+        train_dataset=dataset,
+    )
+
+    trainer.train()
+    trainer.save_model(model_output_dir)
+
+if __name__ == "__main__":
+    dataset_path = "../data/processed/processed_chats.json"
+    model_output_dir = "../models/gpt2-base/"
+    train_gpt2_model(dataset_path, model_output_dir)
