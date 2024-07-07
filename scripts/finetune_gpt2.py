@@ -15,9 +15,9 @@ def create_data_collator(tokenizer):
     )
 
 def main():
-    model_name = "gpt2"
-    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-    model = GPT2LMHeadModel.from_pretrained(model_name)
+    model_path = "models/gpt2-base"
+    tokenizer = GPT2Tokenizer.from_pretrained(model_path)
+    model = GPT2LMHeadModel.from_pretrained(model_path)
 
     train_path = "data/processed/support_chats_cleaned.txt"
     dataset = load_dataset(train_path, tokenizer)
