@@ -1,0 +1,14 @@
+[
+    {
+        "timestamp": "2024-07-06T12:34:56",
+        "text": "Agent: Deixe-me verificar... Seu pedido está a caminho e deve chegar amanhã. Customer: É 12345."
+    },
+    {
+        "timestamp": "2024-07-07T14:22:34",
+        "text": "Agent: Obrigado! Vou verificar... Parece que houve um problema com sua senha. Você gostaria de redefini-la? Customer: Sim, por favor."
+    },
+    {
+        "timestamp": "2024-07-08T09:15:43",
+        "text": "Agent: Entendo. Vamos processar seu cancelamento imediatamente. Lamentamos vê-lo partir! Customer: Estou mudando para outro serviço."
+    }
+]
