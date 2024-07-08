@@ -16,6 +16,6 @@ def preprocess_data(input_file, output_file):
         json.dump(processed_data, f, indent=4)
 
 if __name__ == "__main__":
-    input_path = "../data/raw/support_chats.json"
-    output_path = "../data/processed/processed_chats.json"
+    input_path = "data/raw/support_chats.json"
+    output_path = "data/processed/processed_chats.json"
     preprocess_data(input_path, output_path)
