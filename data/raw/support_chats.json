@@ -4,14 +4,24 @@
     "agent": "Olá! Como posso ajudar hoje?",
     "customer": "Meu pedido não chegou ainda.",
     "agent": "Qual é o número do seu pedido?",
-    "customer": "É 12345."
+    "customer": "É 12345.",
+    "agent": "Deixe-me verificar... Seu pedido está a caminho e deve chegar amanhã."
   },
   {
-    "timestamp": "2024-07-06T12:35:30",
-    "agent": "Como posso ajudá-lo hoje?",
-    "customer": "Estou com um problema no meu pedido.",
-    "agent": "Qual é o número do seu pedido?",
-    "customer": "67890."
+    "timestamp": "2024-07-07T14:22:34",
+    "agent": "Boa tarde! Em que posso ser útil?",
+    "customer": "Estou tendo problemas para acessar minha conta.",
+    "agent": "Você poderia me fornecer seu e-mail cadastrado?",
+    "customer": "meuemail@example.com",
+    "agent": "Obrigado! Vou verificar... Parece que há um problema com sua senha. Você gostaria de redefini-la?",
+    "customer": "Sim, por favor."
+  },
+  {
+    "timestamp": "2024-07-08T09:15:43",
+    "agent": "Bom dia! Como posso ajudar?",
+    "customer": "Gostaria de cancelar minha assinatura.",
+    "agent": "Pode me informar o motivo do cancelamento?",
+    "customer": "Estou mudando para outro serviço.",
+    "agent": "Entendo. Vamos processar seu cancelamento imediatamente. Lamentamos vê-lo partir!"
   }
-  // Adicione mais entradas conforme necessário
 ]
