@@ -169,7 +169,3 @@ python scripts/train_model.py
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias.
-
-## Licença
-
-Este projeto é licenciado sob a Licença MIT.
