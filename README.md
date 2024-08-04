@@ -50,8 +50,6 @@ Os dados de treinamento devem estar no formato JSON e armazenados no diretório 
     "customer": "É 12345.",
     "agent": "Deixe-me verificar... Seu pedido está a caminho e deve chegar amanhã."
   },
-  ...
-]
 ```
 
 ## Pré-processamento dos Dados
