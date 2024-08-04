@@ -15,6 +15,7 @@ gpt2-finetuning/
 │   └── gpt2-base/
 ├── notebooks/
 ├── scripts/
+│   ├── download_model.py
 │   ├── preprocess_data.py
 │   └── train_model.py
 └── README.md
