@@ -5,7 +5,7 @@ Este projeto tem como objetivo treinar um modelo GPT-2 baseado em dados de conve
 ## Estrutura do Diretório
 
 ```
-meu-repositorio/
+gpt2-finetuning/
 ├── data/
 │   ├── raw/
 │   │   └── support_chats.json
